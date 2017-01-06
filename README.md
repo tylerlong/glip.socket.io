@@ -13,3 +13,7 @@ yarn add glip.socket.io
 
 
 ## Usage
+
+```javascript
+
+```

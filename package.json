@@ -1,0 +1,33 @@
+{
+  "name": "glip.socket.io",
+  "version": "0.1.0",
+  "description": "Socket.io client for Glip.",
+  "main": "src/index.bundle.js",
+  "scripts": {
+    "build": "webpack --progress --colors --watch",
+    "upgrade": "ncu -ua && yarn upgrade"
+  },
+  "files": [
+    "README.md",
+    "yarn.lock",
+    "package.json",
+    "src/index.bundle.js"
+  ],
+  "repository": "git@github.com:tylerlong/glip.socket.io.git",
+  "author": "Tyler Long <tyler4long@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.5",
+    "json-loader": "^0.5.4",
+    "npm-check-updates": "^2.8.9",
+    "standard": "^8.6.0",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "fast_bindall": "^0.0.1",
+    "socket.io-client": "^1.7.2",
+    "underscore": "^1.8.3"
+  }
+}
