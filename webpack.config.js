@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  entry: './src/bot.js',
+  entry: './src/glip_socket.js',
   output: {
     path: path.join(__dirname, 'src'),
     filename: 'index.bundle.js',

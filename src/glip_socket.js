@@ -7,10 +7,9 @@ var socketClient = require('socket.io-client')
 var eventEmitter = require('events').EventEmitter
 var https = require('https')
 
-var Bot = function (options) {
+var GlipSocket = function (options) {
   _.extend(this, options)
   fastBindall(this)
-  this.handlers = []
   this.type_ids = typeIds
   this.scoreboard_url = 'https://' + this.host + ':' + this.port
   this.request_callbacks = {}
@@ -18,7 +17,7 @@ var Bot = function (options) {
   this.has_processed = {}
 }
 
-_.extend(Bot.prototype, eventEmitter.prototype, idUtilities.prototype, {
+_.extend(GlipSocket.prototype, eventEmitter.prototype, idUtilities.prototype, {
   start: function () {
     async.series([
       this.get_scoreboard,
@@ -258,12 +257,7 @@ _.extend(Bot.prototype, eventEmitter.prototype, idUtilities.prototype, {
         return process.nextTick(callback)
       }
     )
-  },
-  use: function (HandlerDef, opts) {
-    opts = opts || {}
-    opts.bot = this
-    this.handlers.push(new HandlerDef(opts))
   }
 })
 
-module.exports = Bot
+module.exports = GlipSocket
