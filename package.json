@@ -19,7 +19,7 @@
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
-    "babel-preset-env": "^1.1.6",
+    "babel-preset-env": "^1.1.8",
     "json-loader": "^0.5.4",
     "npm-check-updates": "^2.8.9",
     "standard": "^8.6.0",
