@@ -27,4 +27,5 @@ client.on('message', (type, data) => {
     client.post(data.group_id, 'pong')
   }
 })
+client.start()
 ```

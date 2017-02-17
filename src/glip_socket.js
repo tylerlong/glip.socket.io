@@ -32,7 +32,7 @@ _.extend(GlipSocket.prototype, eventEmitter.prototype, idUtilities.prototype, {
     if (error) {
       return this.handle_error(error)
     }
-    console.warn('UP AND RUNNING')
+    // console.warn('UP AND RUNNING')
     this.emit('started')
   },
   connect: function (callback) {
@@ -61,7 +61,7 @@ _.extend(GlipSocket.prototype, eventEmitter.prototype, idUtilities.prototype, {
         Cookie: this.cookie
       }
     }
-    console.warn('cookie:', this.cookie)
+    // console.warn('cookie:', this.cookie)
     this.socket = socketClient.connect('https://' + this.sexio_host + ':' + this.port, opts)
     this.socket.once('connect', callback)
     this.socket.on('event', this.handle_event)
