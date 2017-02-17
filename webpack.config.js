@@ -1,5 +1,8 @@
+const nodeExternals = require('webpack-node-externals')
+
 const config = {
   target: 'node',
+  externals: [nodeExternals()],
   entry: {
     'index': './src/glip_socket.js'
   },
@@ -8,22 +11,21 @@ const config = {
     filename: '[name].bundle.js',
     libraryTarget: 'commonjs2'
   },
-  externals: ['ws'],
   module: {
-    noParse: [/ws/],
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: [
-            ['env', {
-              'targets': {
-                'node': 4.2
-              }
-            }]
-          ]
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['env', {
+                'targets': {
+                  'node': 4.2
+                }
+              }]
+            ]
+          }
         }
       }
     ]
