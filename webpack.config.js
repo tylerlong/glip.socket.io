@@ -1,20 +1,17 @@
-const path = require('path')
-
 module.exports = {
-  entry: './src/glip_socket.js',
+  target: 'node',
+  entry: {
+    'index': './src/glip_socket.js'
+  },
   output: {
-    path: path.join(__dirname, 'src'),
-    filename: 'index.bundle.js',
+    path: './src',
+    filename: '[name].bundle.js',
     libraryTarget: 'commonjs2'
   },
   externals: ['ws'],
   module: {
-    noParse: ['ws'],
+    noParse: [/ws/],
     loaders: [
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
-      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -30,6 +27,5 @@ module.exports = {
         }
       }
     ]
-  },
-  target: 'node'
+  }
 }
