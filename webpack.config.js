@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   target: 'node',
   entry: {
     'index': './src/glip_socket.js'
@@ -29,3 +29,5 @@ module.exports = {
     ]
   }
 }
+
+export default [config]
