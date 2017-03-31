@@ -160,7 +160,7 @@ _.extend(GlipSocket.prototype, eventEmitter.prototype, idUtilities.prototype, {
       is_new: true,
       item_ids: itemIds,
       group_id: groupId,
-      text: text,
+      text: `${text}`,
       item_data: itemData,
       at_mention_item_ids: [],
       at_mention_non_item_ids: [],
