@@ -8,7 +8,7 @@ Most of the code is copied from [glipbot](https://github.com/jstrinko/glipbot).
 ## Installation
 
 ```
-yarn add glip.socket.io
+yarn add tylerlong/glip.socket.io
 ```
 
 
@@ -17,10 +17,10 @@ yarn add glip.socket.io
 ```javascript
 const GlipSocket = require('glip.socket.io')
 const client = new GlipSocket({
-  host: process.env.HUBOT_GLIP_HOST || 'app.glip.com',
-  port: process.env.HUBOT_GLIP_PORT || 443,
-  user: process.env.HUBOT_GLIP_EMAIL,
-  password: process.env.HUBOT_GLIP_PASSWORD
+  host: process.env.GLIP_HOST || 'app.glip.com',
+  port: process.env.GLIP_PORT || 443,
+  user: process.env.GLIP_EMAIL,
+  password: process.env.GLIP_PASSWORD
 })
 client.on('message', (type, data) => {
   if (type === this.client.type_ids.TYPE_ID_POST && data.text === 'ping') {
