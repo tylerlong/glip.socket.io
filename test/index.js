@@ -1,7 +1,7 @@
 const dotenv = require('dotenv')
 dotenv.config()
 
-const GlipSocket = require('../src/index.bundle')
+const GlipSocket = require('../dist/index')
 
 const client = new GlipSocket({
   host: process.env.GLIP_HOST || 'app.glip.com',

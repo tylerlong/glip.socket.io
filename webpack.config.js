@@ -8,8 +8,8 @@ const config = {
     index: './src/glip_socket.js'
   },
   output: {
-    path: path.join(__dirname, './src'),
-    filename: '[name].bundle.js',
+    path: path.join(__dirname, 'dist'),
+    filename: '[name].js',
     libraryTarget: 'commonjs2'
   },
   module: {
