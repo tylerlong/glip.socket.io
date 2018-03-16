@@ -97,7 +97,9 @@ _.extend(GlipSocket.prototype, eventEmitter.prototype, idUtilities.prototype, {
           var parts = cookie.split(/;/)
           return parts[0]
         }).join('; ')
-        if (!self.cookie) { return callback('Unable to authenticate') }
+        if (!self.cookie) {
+          return callback(new Error('Unable to authenticate'))
+        }
         return process.nextTick(callback)
       }
     )
