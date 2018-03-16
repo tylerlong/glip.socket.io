@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --progress --colors",
     "build:watch": "yarn build --watch",
-    "upgrade": "ncu -ua && yarn upgrade",
+    "upgrade": "yarn-upgrade-all",
     "test": "node test/index.js"
   },
   "files": [
@@ -23,10 +23,10 @@
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "dotenv": "^5.0.1",
-    "npm-check-updates": "^2.11.0",
     "standard": "^10.0.2",
     "webpack": "^2.4.1",
-    "webpack-node-externals": "^1.5.4"
+    "webpack-node-externals": "^1.5.4",
+    "yarn-upgrade-all": "^0.3.0"
   },
   "dependencies": {
     "async": "^2.4.0",
