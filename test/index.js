@@ -15,3 +15,5 @@ client.on('message', (type, data) => {
 })
 
 client.start()
+
+module.exports = client
