@@ -1,4 +1,4 @@
-var _ = require('underscore')
+var _ = require('lodash')
 var fastBindall = require('fast_bindall')
 var idUtilities = require('./id_utilities')
 var typeIds = require('./type_ids')
