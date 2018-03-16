@@ -4,7 +4,7 @@
   "description": "Socket.io client for Glip.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "node -r babel-register node_modules/.bin/webpack --progress --colors",
+    "build": "webpack --progress --colors",
     "build:watch": "yarn build --watch",
     "upgrade": "ncu -ua && yarn upgrade",
     "test": "node test/index.js"
