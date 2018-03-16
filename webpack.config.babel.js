@@ -2,6 +2,7 @@ import path from 'path'
 import nodeExternals from 'webpack-node-externals'
 
 const config = {
+  mode: 'development',
   target: 'node',
   externals: [nodeExternals()],
   entry: {
