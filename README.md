@@ -29,3 +29,8 @@ client.on('message', (type, data) => {
 })
 client.start()
 ```
+
+
+## For maintainers
+
+We need to put `dist/` folder into git version control because this NPM package is hosted by GitHub.
