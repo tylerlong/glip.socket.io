@@ -9,6 +9,7 @@ client.on('started', () => {
     },
     (error, data) => {
       console.warn(error, data)
+      console.log(JSON.stringify(data, null, 2))
     }
   )
 })
