@@ -1,6 +1,6 @@
 {
   "name": "glip.socket.io",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "Socket.io client for Glip.",
   "main": "dist/index.js",
   "scripts": {
