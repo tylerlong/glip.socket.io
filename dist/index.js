@@ -211,6 +211,7 @@ _.extend(GlipSocket.prototype, eventEmitter.prototype, idUtilities.prototype, {
       message = JSON.parse(messageRaw);
     } catch (error) {
       console.warn(error);
+      return;
     }
     if (!message.body || !message.body.objects) {
       return;
