@@ -139,6 +139,7 @@ _.extend(GlipSocket.prototype, eventEmitter.prototype, idUtilities.prototype, {
       message = JSON.parse(messageRaw)
     } catch (error) {
       console.warn(error)
+      return
     }
     if (!message.body || !message.body.objects) { return }
     async.forEach(message.body.objects, this.process_object_group, this.handle_error)
