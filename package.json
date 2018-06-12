@@ -1,6 +1,6 @@
 {
   "name": "glip.socket.io",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Socket.io client for Glip.",
   "main": "dist/index.js",
   "scripts": {
@@ -18,21 +18,21 @@
   "repository": "git@github.com:tylerlong/glip.socket.io.git",
   "author": "Tyler Long <tyler4long@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "dotenv": "^5.0.1",
-    "standard": "^11.0.1",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15",
-    "webpack-node-externals": "^1.7.2",
-    "yarn-upgrade-all": "^0.3.0"
-  },
   "dependencies": {
-    "async": "^2.6.0",
+    "async": "^2.6.1",
     "fast_bindall": "^0.0.1",
     "lodash": "^4.17.10",
-    "socket.io-client": "^2.1.0"
+    "socket.io-client": "^2.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "dotenv": "^6.0.0",
+    "standard": "^11.0.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.3",
+    "webpack-node-externals": "^1.7.2",
+    "yarn-upgrade-all": "^0.3.0"
   }
 }
